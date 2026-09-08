@@ -1,3 +1,5 @@
+![Knights of the Astral Plane](Knight%20of%20the%20astral%20plane_titelbild.jpg)
+
 # Knights of the Astral Plane
 
 *A tiny, strange game about an aspiring knight skipping stones across the astral plane.*

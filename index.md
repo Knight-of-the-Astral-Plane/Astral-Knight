@@ -1,19 +1,153 @@
-![Knights of the Astral Plane](Knight%20of%20the%20astral%20plane_titelbild.jpg)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-# Knights of the Astral Plane
+  <title>Knights of the Astral Plane</title>
 
-*A tiny, strange game about an aspiring knight skipping stones across the astral plane.*
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-**Offline. No ads. No accounts. No subscriptions.**
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, serif;
+      background: #f7f7f5;
+      color: #222;
+      padding: 40px;
+    }
 
-## Privacy Policy
+    .page {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      width: min(100%, 1000px);
+    }
 
-Knights of the Astral Plane does not collect, store, transmit, or share personal data.
+    .image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
 
-The game works entirely offline and does not use advertising, analytics, tracking, or user accounts.
+    .image img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
 
-## Contact
+    .content {
+      flex: 1;
+      max-width: 430px;
+    }
 
-For support or questions:
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.1;
+      margin: 0 0 18px;
+    }
 
-deine-support-email
+    .tagline {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+
+    .features {
+      font-weight: bold;
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-top: 28px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    @media (max-width: 750px) {
+      body {
+        align-items: flex-start;
+        padding: 24px;
+      }
+
+      .page {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .image img {
+        max-width: 380px;
+      }
+
+      .content {
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="image">
+      <img
+        src="Knight%20of%20the%20astral%20plane_titelbild.jpg"
+        alt="Knight of the Astral Plane">
+    </div>
+
+    <div class="content">
+
+      <h1>Knights of the Astral Plane</h1>
+
+      <p class="tagline">
+        A tiny, strange game about an aspiring knight skipping stones across the astral plane.
+      </p>
+
+      <p class="features">
+        Offline. No ads. No accounts. No subscriptions.
+      </p>
+
+      <h2>Privacy Policy</h2>
+
+      <p>
+        Knights of the Astral Plane does not collect, store,
+        transmit, or share personal data.
+      </p>
+
+      <p>
+        The game works entirely offline and does not use advertising,
+        analytics, tracking, or user accounts.
+      </p>
+
+      <h2>Contact</h2>
+
+      <p>
+        For support or questions:<br>
+        <a href="mailto:DEINE-EMAIL">DEINE-EMAIL</a>
+      </p>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

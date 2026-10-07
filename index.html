@@ -11,147 +11,116 @@
       box-sizing: border-box;
     }
 
-    html,
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      min-height: 100%;
-      background: #ffffff;
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
     }
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 48px 24px;
-
-      font-family: Inter, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", Helvetica, Arial, sans-serif;
-
-      color: #222;
-    }
-
-    .page {
-      width: min(100%, 960px);
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+    main {
+      width: min(1200px, calc(100% - 40px));
+      margin: 0 auto;
     }
 
     .hero {
-      width: 100%;
+      min-height: 72vh;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 56px;
-    }
-
-    .image {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .image img {
-      display: block;
-      width: 100%;
-      max-width: 390px;
-      height: auto;
-    }
-
-    .content {
-      flex: 1;
-      max-width: 430px;
+      padding: 80px 20px 60px;
     }
 
     h1 {
-      margin: 0 0 18px;
-      font-size: 2.2rem;
-      line-height: 1.08;
+      margin: 0 0 30px;
+      max-width: 900px;
+      font-size: clamp(44px, 8vw, 100px);
+      line-height: 0.95;
       font-weight: 700;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
     }
 
-    .tagline {
-      margin: 0 0 26px;
-      font-size: 1.1rem;
-      line-height: 1.55;
-      font-style: italic;
+    .intro {
+      max-width: 660px;
+      margin: 0 auto;
+      font-size: clamp(18px, 2.2vw, 26px);
+      line-height: 1.45;
     }
 
-    .features {
-      margin: 0 0 38px;
-      font-size: 0.95rem;
-      font-weight: 650;
-    }
-
-    h2 {
-      margin: 28px 0 12px;
-      font-size: 1.05rem;
-      font-weight: 700;
-    }
-
-    p {
-      margin: 0 0 16px;
-      line-height: 1.55;
-    }
-
-    a {
-      color: inherit;
+    .statement {
+      margin-top: 50px;
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.72;
     }
 
     .screenshots {
-      width: 100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      gap: 14px;
+      align-items: start;
+      padding: 50px 0 100px;
     }
 
     .screenshots img {
-      display: block;
       width: 100%;
       height: auto;
+      display: block;
+      border-radius: 18px;
     }
 
-    .footer {
-      margin-top: 24px;
-      padding-top: 18px;
-      border-top: 1px solid #e5e5e5;
-      font-size: 0.85rem;
-      color: #777;
+    .about {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px 0 120px;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
-    @media (max-width: 760px) {
-      body {
-        padding: 24px 18px;
-      }
+    .about strong {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
 
-      .hero {
-        flex-direction: column;
-        gap: 32px;
-      }
+    footer {
+      padding: 50px 20px 60px;
+      font-size: 13px;
+      line-height: 1.7;
+      opacity: 0.6;
+    }
 
-      .image {
-        justify-content: center;
-      }
+    footer a {
+      color: inherit;
+    }
 
-      .image img {
-        max-width: 380px;
-      }
-
-      .content {
-        width: 100%;
-        max-width: 500px;
-      }
-
+    @media (max-width: 900px) {
       .screenshots {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
       }
     }
 
     @media (max-width: 480px) {
+      main {
+        width: min(100% - 24px, 1200px);
+      }
+
+      .hero {
+        min-height: 65vh;
+        padding: 60px 10px 40px;
+      }
+
       .screenshots {
         grid-template-columns: 1fr;
+        gap: 16px;
+        padding-top: 30px;
       }
     }
   </style>
@@ -159,95 +128,53 @@
 
 <body>
 
-  <main class="page">
+  <main>
 
-    <div class="hero">
+    <section class="hero">
+      <h1>Knights of the Astral Plane</h1>
 
-      <div class="image">
-        <img
-          src="Knight%20of%20the%20astral%20plane_titelbild.jpg"
-          alt="Knights of the Astral Plane">
+      <p class="intro">
+        A tiny, strange game about an aspiring knight skipping stones
+        across the astral plane.
+      </p>
+
+      <div class="statement">
+        No ads. No quests. No explanation.<br>
+        Offline. No accounts. No subscriptions.
       </div>
+    </section>
 
-      <div class="content">
 
-        <h1>Knights of the Astral Plane</h1>
+    <section class="screenshots">
+      <img src="Screenshot_06.jpg" alt="Knights of the Astral Plane screenshot">
+      <img src="Screenshot_05.jpg" alt="Knights of the Astral Plane screenshot">
+      <img src="Screenshot_04.jpg" alt="Knights of the Astral Plane screenshot">
+      <img src="Screenshot_03.jpg" alt="Knights of the Astral Plane screenshot">
+    </section>
 
-        <p class="tagline">
-          A tiny, strange game about an aspiring knight skipping stones across the astral plane.
-        </p>
 
-        <p class="features">
-          Offline. No ads. No accounts. No subscriptions.
-        </p>
+    <section class="about">
+      <strong>Skip stones. Become a knight.</strong>
 
-        <h2>Privacy Policy</h2>
-
-        <p>
-          Knights of the Astral Plane does not collect, store, transmit,
-          sell, or share personal or device data.
-        </p>
-
-        <p>
-          The game works entirely offline and does not use advertising,
-          analytics, tracking, user accounts, cloud services, or third-party
-          advertising or analytics services.
-        </p>
-
-        <p>
-          Game progress and settings may be stored locally on your device.
-          This information remains on your device and is not transmitted
-          to the developer.
-        </p>
-
-        <p>
-          Local game data can be removed by clearing the app's storage
-          or uninstalling the game.
-        </p>
-
-        <p>
-          Since the developer does not collect personal data, no personal
-          data is retained, sold, rented, or shared with third parties.
-        </p>
-
-        <h2>Contact</h2>
-
-        <p>
-          For support or privacy-related questions:<br>
-          <a href="mailto:knightoftheastralplane@gmail.com">
-            knightoftheastralplane@gmail.com
-          </a>
-        </p>
-
-      </div>
-
-    </div>
-
-    <div class="screenshots">
-
-      <img
-        src="KOTAP_01.png"
-        alt="Knights of the Astral Plane gameplay screenshot">
-
-      <img
-        src="KOTAP_02.png"
-        alt="Knights of the Astral Plane gameplay screenshot">
-
-      <img
-        src="KOTAP_03.png"
-        alt="Knights of the Astral Plane gameplay screenshot">
-
-      <img
-        src="screenshot_03.jpg"
-        alt="Knights of the Astral Plane spin mechanic screenshot">
-
-    </div>
-
-    <div class="footer">
-      © 2026 Knights of the Astral Plane
-    </div>
+      <p>
+        Travel through strange landscapes, search for better stones,
+        learn how to balance power, spin and curve, and see how far
+        across the astral plane you can go.
+      </p>
+    </section>
 
   </main>
+
+
+  <footer>
+    Knights of the Astral Plane<br>
+    No analytics. No tracking. No advertising.<br><br>
+
+    Support:
+    <a href="mailto:knightoftheastralplane@gmail.com">
+      knightoftheastralplane@gmail.com
+    </a>
+  </footer>
 
 </body>
 </html>
